@@ -1,0 +1,95 @@
+body {
+  margin-top: 0;
+}
+#shuffle-and-sort h2 {
+  text-align: center;
+  margin: 0;
+  padding: 0.75rem;
+  background-color: #333333;
+  color: #ffffff;
+}
+#shuffle-and-sort #wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+}
+#shuffle-and-sort #wrapper #cards {
+  width: 100%;
+}
+#shuffle-and-sort #wrapper #cards p {
+  text-align: center;
+}
+#shuffle-and-sort #wrapper #cards #collection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+#shuffle-and-sort #wrapper #cards #collection .card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.125rem;
+  font-size: 1.25rem;
+  margin-bottom: 0.625rem;
+  position: relative;
+  text-align: center;
+  z-index: 999;
+  text-shadow: 1px 1px 1px #ffffff;
+}
+#shuffle-and-sort #wrapper #actions {
+  text-align: center;
+}
+#shuffle-and-sort #wrapper #actions button {
+  text-transform: uppercase;
+  background-color: #72c3dc;
+  color: #ffffff;
+  padding: 0.875rem 1.25rem;
+  box-shadow: 0 0.25rem 0.125rem 0 #2b8ead;
+  border-radius: 0.5rem;
+  border-color: #72c3dc00;
+  margin: 0.875rem 0;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  #shuffle-and-sort #wrapper #cards #collection .card:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: calc(100% - 0.625rem);
+    background: whitesmoke;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #shuffle-and-sort h2 {
+    background-color: transparent;
+    color: #000000;
+  }
+  #shuffle-and-sort #wrapper {
+    flex-direction: row;
+  }
+  #shuffle-and-sort #wrapper #cards p {
+    text-align: right;
+    position: relative;
+    right: 7rem;
+  }
+  #shuffle-and-sort #wrapper #cards #collection .card {
+    width: 33%;
+    height: 12.5rem;
+    font-size: 5rem;
+    margin-bottom: 0;
+  }
+  #shuffle-and-sort #wrapper #actions {
+    flex-basis: 20%;
+    padding: 0 1rem;
+  }
+  #shuffle-and-sort #wrapper #actions button {
+    width: 100%;
+    margin: 0.75rem 0;
+  }
+}
